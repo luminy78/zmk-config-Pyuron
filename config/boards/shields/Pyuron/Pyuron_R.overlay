@@ -42,7 +42,7 @@
 &trackball_listener_R {
     status = "okay";
     device = <&trackball_R>;
-    input-processors = <&zip_xy_scaler 3 1>;
+    input-processors = <&zip_xy_scaler 3 1>, <&zip_xy_transform (INPUT_TRANSFORM_270)>;
 };
 
 &spi0 {
