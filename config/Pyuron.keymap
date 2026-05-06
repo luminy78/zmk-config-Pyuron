@@ -59,6 +59,13 @@
         #binding-cells = <2>;
         tapping-term-ms = <200>;
     };
+
+    LANG12_TapDance: LANG12_TapDance {
+        compatible = "zmk,behavior-tap-dance";
+        label = "LANG12_TAPDANCE";
+        #binding-cells = <0>;
+        bindings = <&kp LANGUAGE_2>, <&kp LANG1>;
+    };
 };
 
 / {
@@ -70,10 +77,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W      &kp E      &kp R         &kp T           &kp Y        &kp U          &kp I        &kp O          &kp P
-&kp A             &kp S      &kp D      &kp F         &kp G           &kp H        &kp J          &kp K        &kp L          &kp SQT
-&mt LEFT_SHIFT Z  &kp X      &kp C      &kp V         &kp B           &lt 4 COLON  &kp SEMICOLON  &kp N        &kp M          &kp COMMA
-&kp DOT           &kp SLASH  &kp LCTRL  &kp LEFT_WIN  &lt 2 LEFT_ALT  &lt 3 SPACE  &kp BACKSPACE  &lt 1 ENTER  &kp RIGHT_ALT  &kp DEL
+&kp Q             &kp W      &kp E      &kp R         &kp T           &kp Y        &kp U             &kp I        &kp O          &kp P
+&kp A             &kp S      &kp D      &kp F         &kp G           &kp H        &kp J             &kp K        &kp L          &kp SQT
+&mt LEFT_SHIFT Z  &kp X      &kp C      &kp V         &kp B           &lt 4 COLON  &kp SEMICOLON     &kp N        &kp M          &kp COMMA
+&kp DOT           &kp SLASH  &kp LCTRL  &kp LEFT_WIN  &lt 2 LEFT_ALT  &lt 3 SPACE  &LANG12_TapDance  &lt 1 ENTER  &kp RIGHT_ALT  &kp DEL
             >;
         };
 
