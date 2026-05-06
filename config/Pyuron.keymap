@@ -98,8 +98,3 @@
         };
     };
 };
-
-&trackball_R {
-    automouse-layer = <6>;              // 操作時にレイヤー6へ移動
-    automouse-layer-timeout-ms = <600>;  // 操作終了後600ms（記事推奨値）で復帰
-};
