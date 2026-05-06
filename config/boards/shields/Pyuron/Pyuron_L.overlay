@@ -35,8 +35,8 @@
 
 &trackball_split_L {
     device = <&trackball_L>;
-    /* 左側用の設定：速度 0.5倍 + 軸入れ替え + X軸反転（鏡合わせ対応） */
-    input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>;
+    /* XY_SWAPを削除し、X軸の反転のみを適用してみる */
+    input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>;
 };
 
 &spi0 {
