@@ -95,10 +95,10 @@
 
         Number {
             bindings = <
-&trans        &trans      &trans  &trans         &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS     &kp KP_DIVIDE
-&trans        &trans      &trans  &kp BACKSPACE  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_ASTERISK
-&trans        &trans      &trans  &trans         &trans  &trans           &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&kp KP_EQUAL  &kp KP_DOT  &trans  &trans         &trans  &trans           &trans           &kp KP_NUMBER_0  &trans           &trans
+&trans          &trans      &trans        &trans         &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS     &kp KP_DIVIDE
+&kp LCTRL       &trans      &trans        &kp BACKSPACE  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_ASTERISK
+&kp LEFT_SHIFT  &trans      &trans        &trans         &trans  &trans           &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&kp KP_EQUAL    &kp KP_DOT  &kp LEFT_GUI  &kp LEFT_ALT   &trans  &trans           &trans           &kp KP_NUMBER_0  &trans           &trans
             >;
         };
 
