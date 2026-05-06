@@ -35,8 +35,8 @@
 
 &trackball_split_L {
     device = <&trackball_L>;
-    /* XY_SWAPを削除し、X軸の反転のみを適用してみる */
-    input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>;
+    /* 左右はそのまま、上下（Y軸）のみを反転 */
+    input-processors = <&zip_xy_scaler 1 2>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>;
 };
 
 &spi0 {
