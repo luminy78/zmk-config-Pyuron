@@ -165,7 +165,7 @@
 &trackball_listener_L {
     status = "okay";
     /* スクロールを有効にするレイヤー番号 */
-    layers = <0 1 2 3 4>;
+    layers = <0 1 2 4 5>;
     input-processors = <&zip_xy_to_scroll_mapper>;
 };
 
@@ -176,6 +176,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball_L>;
         /* カーソル移動を有効にするレイヤー番号（Symbolレイヤー） */
-        layers = <5>;
+        layers = <3>;
+        input-processors = <&zip_xy_scaler 1 1>;
     };
 };
