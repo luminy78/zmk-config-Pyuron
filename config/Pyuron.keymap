@@ -156,9 +156,9 @@
 
         Symbol {
             bindings = <
-&kp EXCLAMATION    &kp QUESTION  &trans        &trans        &trans  &kp JP_LPAREN         &kp JP_RPAREN         &kp SLASH          &kp JP_PIPE        &kp JP_YEN
-&mt LCTRL JP_AT    &kp HASH      &kp DLLR      &trans        &trans  &kp JP_LBRACE         &kp JP_RBRACE         &trans             &kp JP_AMPERSAND   &kp JP_CARET
-&kp LEFT_SHIFT     &trans        &trans        &trans        &trans  &trans                &trans                &kp JP_LBRACKET    &kp JP_RBRACKET    &trans
+&kp EXCLAMATION    &kp QUESTION  &trans        &trans        &trans  &kp ASTERISK          &kp LEFT_PARENTHESIS  &kp SLASH          &kp LS(INT3)       &kp INT3
+&mt LCTRL LEFT_BRACKET &kp HASH  &kp DLLR      &trans        &trans  &kp RIGHT_BRACE       &kp PIPE              &trans             &kp CARET          &kp EQUAL
+&kp LEFT_SHIFT     &trans        &trans        &trans        &trans  &trans                &trans                &kp RIGHT_BRACKET  &kp BACKSLASH      &trans
 &trans             &trans        &kp LEFT_GUI  &kp LEFT_ALT  &trans  &trans                &trans                &trans             &trans             &trans
             >;
         };
