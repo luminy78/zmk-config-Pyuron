@@ -161,30 +161,26 @@
     };
 };
 
-/* 1. デフォルトのリスナーを無効化（競合を避けるため） */
+/* デフォルトのリスナーを無効化 */
 &trackball_listener_L {
     status = "disabled";
 };
 
-/* 2. 新しく2つの挙動を定義 */
 / {
-    /* スクロール用リスナー */
-    trackball_L_scroll: trackball_L_scroll {
+    /* スクロール用（レイヤー 0,1,2,4,5） */
+    trackball_L_scroll_listener: trackball_L_scroll_listener {
         compatible = "zmk,input-listener";
         device = <&trackball_L>;
-        /* スクロールさせたいレイヤーを指定 */
         layers = <0 1 2 4 5>;
-        /* overlay側の1/2速をそのままスクロールに変換 */
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
 
-    /* カーソル移動用リスナー */
-    trackball_L_cursor: trackball_L_cursor {
+    /* カーソル移動用（レイヤー 3） */
+    trackball_L_cursor_listener: trackball_L_cursor_listener {
         compatible = "zmk,input-listener";
         device = <&trackball_L>;
-        /* カーソル移動させたいレイヤー（Symbol） */
         layers = <3>;
-        /* 1 1 に設定することで overlay側の1/2速がそのまま適用される */
+        /* overlay側の1/2速を維持するため 1 1 を指定 */
         input-processors = <&zip_xy_scaler 1 1>;
     };
 };
