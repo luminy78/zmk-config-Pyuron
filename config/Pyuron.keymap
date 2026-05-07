@@ -2,9 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-/* 以下の2行を追加 */
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
 #define MOUSE 6
 
@@ -158,29 +155,5 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-    };
-};
-
-/* デフォルトのリスナーを無効化 */
-&trackball_listener_L {
-    status = "disabled";
-};
-
-/ {
-    /* スクロール用（レイヤー 0,1,2,4,5） */
-    trackball_L_scroll_listener: trackball_L_scroll_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_L>;
-        layers = <0 1 2 4 5>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
-
-    /* カーソル移動用（レイヤー 3） */
-    trackball_L_cursor_listener: trackball_L_cursor_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_L>;
-        layers = <3>;
-        /* overlay側の1/2速を維持するため 1 1 を指定 */
-        input-processors = <&zip_xy_scaler 1 1>;
     };
 };
