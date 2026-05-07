@@ -157,3 +157,23 @@
         };
     };
 };
+
+/* 左トラックボールの挙動をレイヤーで分ける設定 */
+
+/* 1. 全レイヤー共通、またはスクロールさせたいレイヤーの設定 */
+&trackball_listener_L {
+    status = "okay";
+    /* スクロールさせたいレイヤー番号を並べる (例: 0, 1, 2, 4, 5) */
+    layers = <0 1 2 3 4>; 
+    input-processors = <&zip_xy_to_scroll_mapper>;
+};
+
+/* 2. 特定のレイヤーで「カーソル移動」にする設定 */
+/ {
+    trackball_L_cursor {
+        compatible = "zmk,input-listener";
+        device = <&trackball_L>;
+        /* カーソル移動にしたいレイヤー番号を指定 (例: 3) */
+        layers = <5>; 
+    };
+};
