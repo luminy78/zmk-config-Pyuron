@@ -2,6 +2,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+/* 以下の2行を追加 */
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 #define MOUSE 6
 
@@ -158,22 +161,21 @@
     };
 };
 
-/* 左トラックボールの挙動をレイヤーで分ける設定 */
-
-/* 1. 全レイヤー共通、またはスクロールさせたいレイヤーの設定 */
+/* 既存のリスナー設定をレイヤー指定付きで上書き */
 &trackball_listener_L {
     status = "okay";
-    /* スクロールさせたいレイヤー番号を並べる (例: 0, 1, 2, 4, 5) */
-    layers = <0 1 2 3 4>; 
+    /* スクロールを有効にするレイヤー番号 */
+    layers = <0 1 2 3 4>;
     input-processors = <&zip_xy_to_scroll_mapper>;
 };
 
-/* 2. 特定のレイヤーで「カーソル移動」にする設定 */
+/* 新しいリスナー（カーソル移動用）の追加 */
 / {
-    trackball_L_cursor {
+    /* ノード名が重複しないようユニークな名前に設定 */
+    trackball_L_cursor_move: trackball_L_cursor_move {
         compatible = "zmk,input-listener";
         device = <&trackball_L>;
-        /* カーソル移動にしたいレイヤー番号を指定 (例: 3) */
-        layers = <5>; 
+        /* カーソル移動を有効にするレイヤー番号（Symbolレイヤー） */
+        layers = <5>;
     };
 };
