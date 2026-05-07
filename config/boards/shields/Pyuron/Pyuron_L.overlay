@@ -53,5 +53,6 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <1600 1800 2000 2200 2400 2600 2800 3000 3200 200 400 600 800 1000 1200 1400>;
     };
 };
