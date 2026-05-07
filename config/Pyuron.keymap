@@ -131,10 +131,10 @@
 
         Symbol {
             bindings = <
-&kp EXCLAMATION         &kp QUESTION  &trans        &trans        &trans  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp SLASH          &kp LS(INT3)   &kp INT3
-&mt LCTRL LEFT_BRACKET  &kp HASH      &kp DLLR      &trans        &trans  &kp RIGHT_BRACE  &kp PIPE              &trans             &kp CARET      &kp PLUS
-&kp LEFT_SHIFT          &trans        &trans        &trans        &trans  &trans           &trans                &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-&trans                  &trans        &kp LEFT_GUI  &kp LEFT_ALT  &trans  &trans           &trans                &trans             &trans         &trans
+&kp EXCLAMATION         &kp QUESTION  &kp PRCNT     &kp AT_SIGN    &kp AMPERSAND     &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp SLASH          &kp LS(INT3)   &kp INT3
+&mt LCTRL LEFT_BRACKET  &kp HASH      &kp DLLR      &kp SEMICOLON  &kp SINGLE_QUOTE  &kp RIGHT_BRACE  &kp PIPE              &trans             &kp CARET      &kp PLUS
+&kp LEFT_SHIFT          &trans        &trans        &trans         &trans            &trans           &trans                &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
+&trans                  &trans        &kp LEFT_GUI  &kp LEFT_ALT   &trans            &trans           &trans                &trans             &trans         &trans
             >;
         };
 
